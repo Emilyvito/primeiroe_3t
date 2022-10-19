@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Primeiro E</title>
+    <script src="estudo.js"></script>
+</head>
+<body>
+    valor: <input id="valor" type="text"><br>
+    Juros (mensal): <input id="juros" type="text"><br>
+    Nr. Meses: <input id="meses" type="text">
+    <button onclick="calcula()">enviar</button>
+
+
+    <br><br><br><br>
+    nota 1: <input id="t1" type="text"><br>
+    nota 2: <input id="t2" type="text"><br>
+    nota 3: <input id="t3" type="text"><br>
+    <button onclick="sn()">Somar nota</button><br>
+  
+    <span id="rult">0</span>
+
+</body>
+</html>
