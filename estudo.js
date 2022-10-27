@@ -1,8 +1,8 @@
 let tabuada = 4;
 
 function escreva(){
-    document.write("Tabuada do " + tabuada + "<br>");
-    document.write(tabuada + " x 1 = " + (tabuada*1) +"<br>");
+    document.write("<h1>Tabuada do " + tabuada + "</h1>");
+    document.write(tabuada + " x 1 = " + (tabuada*1)+"<br>");
     document.write(tabuada + " x 2 = " + (tabuada*2)+"<br>");
     document.write(tabuada + " x 3 = " + (tabuada*3)+"<br>");
     document.write(tabuada + " x 4 = " + (tabuada*4)+"<br>");
@@ -15,9 +15,9 @@ function escreva(){
 }
 
 function minhaTabuada(){
-    for(let i=1; i = 10; i++){
+    for(let i=1; i <= 10; i++){
         document.write("Tabuada do " + i + "<br>");
-        for(let j = 1; j = 10; j++){
+        for(let j = 1; j <= 10; j++){
             document.write(i + " x " + j + " = " + (j*i)+"<br>");
         }
         document.write("<br>");
@@ -25,43 +25,44 @@ function minhaTabuada(){
 }
 
 function quadrado(){
-    for(let i = 2;i = 1000; i++){
-        document.write("O quadrado de " + i + " é " + (i*i) + "<br>");
+    for(let i = 2; i <= 1000; i++){
+            document.write("O quadrado de " + i + " é " + (i*i) + "<br>");
     }
+}
+
+function moeda(atual){
+    return atual.toLocaleString('pt-br',{style: 'currency', currency: 'BRL'});
 }
 
 function calcula(){
     let val = document.getElementById("valor").value;
     let j = document.getElementById("juros").value;
-    let t = document.getElementById("mes").value;
-    
-    let res = val * (1+(j/100))
-    
-    document.write("Resultado: "+res);
-}
+    let t = document.getElementById("meses").value;
 
-function somaNota(){
-    let n1 = document.getElementById("t1").value;
-    let n2 = document.getElementById("t2").value;
-    let n3 = document.getElementById("t3").value;
-    let r = Number(n1) + Number(n2) + Number(n3);
-    document.getElementById("resultado").innerHTML = "Soma: " + r;
-}
-
-function somaMedia(){
-    let n1 = document.getElementById("t1").value;
-    let n2 = document.getElementById("t2").value;
-    let n3 = document.getElementById("t3").value;
-    let d = 3;
-    let r = Number(n1) + Number(n2) + Number(n3)/d;
-    document.getElementById("resultado").innerHTML = "Média: " + r;
-}
-
-function somaFalta(){
-    let n1 = document.getElementById("t1").value;
-    let n2 = document.getElementById("t2").value;
-    let n3 = document.getElementById("t3").value;
-    let d = 180;
-    let r = Number(n1) + Number(n2) + Number(n3) - d;
-    document.getElementById("resultado").innerHTML = "Falta: " + r;
+    if(!Number(val)){
+        alert("O valor deve ser um número.");
+        document.getElementById("valor").value = "";
+        document.getElementById("valor").focus();
+        return
+    }
+    if(!Number(j)){
+        alert("O valor dos juros deve ser um número.");
+        document.getElementById("juros").value = "";
+        document.getElementById("juros").focus();
+        return
+    }
+    if(!Number(t)){
+        alert("A quantidade de meses deve ser um número.");
+        document.getElementById("meses").value = "";
+        document.getElementById("meses").focus();
+        return
+    }
+    let res = val;
+    for(let m=1; m <= t;m++){
+        res = val * (1+(j/100));
+        val = res;
+        //document.write("Mês " + m + " = " + moeda(res) + "<br>");
+    }
+    document.getElementById("total").innerHTML= "Total: " + moeda(res);
+    //document.write("Resultado: "+moeda(res));
 }
