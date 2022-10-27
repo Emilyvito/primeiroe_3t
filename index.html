@@ -1,27 +1,23 @@
   <!DOCTYPE html>
-  <html lang="pt-br">
-  <head>
-          <meta charset="UTF-8">
-          <meta http-equiv="X-UA-Compatible" content="IE=edge">
-          <meta name="viewport" content="width=device-width, initial-scale=1.0">
-          <title>Primeiro E</title>
-          <script src="estudo.js"></script>
- </head>
- <body>
-     Valor: <input id="valor" type="text"><br>
-     Juros(Melsal): <input id="juros" type="text"><br>
-     Nr. Meses: <input id="mes" type="text"><br>
-     <button onclick="calcula()">Enviar</button>
-     
-     <br><br><br>
-     Nota 1: <input id="t1" type="text"><br>
-     Nota 2: <input id="t2" type="text"><br>
-     Nota 3: <input id="t3" type="text"><br>
-     <button onclick="somaNota()">Somar Notas</button><br>
-     <button onclick="somaMedia()">Somar Média</button><br>
-     <button onclick="somaFalta()">Quanto Falta</button><br>
-     
-     <span id="resultado">0</span>
-     
- </body>
- </html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Primeiro E</title>
+    <script src="estudo.js"></script>
+</head>
+
+<body>
+    <div class="calculadora">
+        <span id="total">Total: 0,00</span><br>
+        Valor: <input id="valor" placeholder="Capital" type="text"><br>
+        Juros(Mensal): <input id="juros" placeholder="% Juros" type="text"><br>
+        Nr. Meses: <input id="meses" placeholder="tempo" type="text"><br>
+        <button onclick="calcula()">Enviar</button><br>
+        <span id="mes">Mês a Mês</span>
+    </div>
+</body>
+
+</html>
