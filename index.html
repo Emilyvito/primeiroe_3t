@@ -1,40 +1,32 @@
   <!DOCTYPE html>
-<html lang="pt-br" dir="ltr">
+<html lang="pt-br">
 
 <head>
-  <meta charset="utf-8">
-  <meta http-equv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-widh , initial-scale=1.0">
-  <title>Primeiro E</title>
-  <script src="estudo.js"></script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Primeiro E</title>
+    <script src="estudo.js"></script>
 
-  <link rel="stylesheet" href="geral.css">
+    <link rel="stylesheet" href="geral.css">
 </head>
 
 <body>
-  <div class="calculadora">
-    <div id="psTotal">
-    <span id="total">Total: 0,00</span><br>
-  </div>
-    Valor: <input id="valor" placeholder="Digite o Capital" type="text"><br>
-    Juros(Mensal): <input id="juros" placeholder="Digite os Juros (mensal)" type="text"><br>
-    Nr. Meses: <input id="meses" placeholder="Digite o Tempo (meses)" type="text"><br>
-    <button id="btnCalc" onclick="calcula()">Enviar</button><br>
-    <span id="mes">Mês a Mês</span>
-  </div>
+    <input type="checkcbox" name="" id="calFin">
+    <div class="calculadora">
+        <label for="calFin"><h3>financeira</h3></label>
 
-  <br><br><br>
-
-  Nota 1: <input id="t1" type="text"><br>
-  Nota 2: <input id="t2" type="text"><br>
-  Nota 3: <input id="t3" type="text"><br>
-
-  <button onclick="somarNotas()">Somar Notas</button>
-  <span id="resultadosoma">0</span><br>
-  <button onclick="mediaNotas()">Média Notas</button>
-  <span id="resultadomedia">0</span><br>
-  <button onclick="fecharNotas()">Notas para Fechar</button>
-  <span id="resultadofechar">0</span><br>
-
+        <div id="psTotal">
+            <span id="total">0,00</span><br>
+        </div>
+        Valor: <input id="valor" placeholder="Capital" type="text"><br>
+        Juros(Mensal): <input id="juros" placeholder="% Juros" type="text"><br>
+        Nr. Meses: <input id="meses" placeholder="tempo" type="text"><br>
+        <button id="btnCalc" onclick="calcula()">Enviar</button><br>
+        <div class="spmes">
+            <span id="mes"></span>
+        </div>
+    </div>
 </body>
-<html>
+
+</html>
